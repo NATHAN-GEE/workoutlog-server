@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
   res.send(`nathan it worked`);
 });
 
-router.get("/register", validateJWT,  async (req, res) => {
+router.post("/register", validateJWT,  async (req, res) => {
   let { username, passwordHash } = req.body.user;
   try {
     let User = await UserModel.create({

@@ -6,7 +6,5 @@ module.exports = (req, res, next) => {
     "X-Requested-With, Content-Type, Accept, Authorization"
   );
 
-
-
   next();
 };
